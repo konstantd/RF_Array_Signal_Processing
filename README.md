@@ -14,17 +14,15 @@ This beamformer uses 8 (M=8) isotropic antenna elements as an array in z-axis. T
 
 1000 sets of angles θo, θ1 and θ2 are created, uniform distributed in [30, 150] degrees, where the distance between any two adjacent angles will not be less than Δθmin (i.e., any set with angles less than Δθmin are discarded). 
 
-For every set of the angles θo, θ1, θ2:
-
-NSB-DL algorithm is executed and the complex weights are calculated. Based on the weights,  Signal to Interference plus Noise Ratio (SINR) is estimated and the radiation pattern is created. After that, the radiaton pattern is used in order to calculate the deviation of the estimations of the main lobe and the 2 zeros (for the interference signals), (i.e., Δθο, Δθ1, Δθ2 are calculated). The code was executed for SNR = 0dB, 5dB, 10dB and20 dB and Δθmin = 2 , 4, 6, 8 and 10 degrees.
+For every set of the angles θo, θ1, θ2: NSB-DL algorithm is executed and the complex weights are calculated. Based on the weights,  Signal to Interference plus Noise Ratio (SINR) is estimated and the radiation pattern is created. After that, the radiaton pattern is used in order to calculate the deviation of the estimations of the main lobe and the 2 zeros (for the interference signals), (i.e., Δθο, Δθ1, Δθ2 are calculated). The code was executed for SNR = 0dB, 5dB, 10dB and20 dB and Δθmin = 2 , 4, 6, 8 and 10 degrees.
 
 The statistic results of the above experiments can be seen in the below image.
 
 <p allign = "center">
-     <img src="/photos/NSB.png"width = "70%">
+     <img src="/photos/NSB.png"width = "100%">
 </p>
 
-#### Conclusions
+### Conclusions
 
 Regarding the deviation of the main lobe from the direction of the desired signal, ignoring some extreme maximum values and judging by the average value each time we observe that on average for all results the deviation is not greater than 3.2 degrees. There is also no significant improvement even for higher SNRs. However it is something we expected as the main goal of the NSB-method is to cancel the interference signals. For large Δθ however, as is logical we have smaller deviations from the true angle θο and a more "condensed sample" based on the standard deviation.
 
@@ -102,6 +100,6 @@ The minimum degree-distance of the 2 signals in order to be recognized is u2-u1=
 
 
 
-#### Conclusions
+### Conclusions
 
 CAPON approach  identifies the angles of arrival. All directions of sources are correctly estimated, and there are observed maxima on the curve at the positions of the angles. Though, the lobes are quite wide and may cover two closely spaced sources. As shown above, for 1dB attenuation, the incoming signal should differ more that 5.4 degrees in order to be recognized, which is quite a poor performance. There are some correspondent modified versions of Capon that can improve the situation.
